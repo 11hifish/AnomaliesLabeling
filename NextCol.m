@@ -10,8 +10,8 @@ function NextCol(hObject,event)
     col_no = col_no + 1;
     colnumber = num2str(col_no);
     set(col_handle,'String',colnumber);
+    
     fig_handle = findobj('Tag','Fig');
     allData = guidata(fig_handle);
- 
     plot(allData.raw_data(:,col_no));
 end
