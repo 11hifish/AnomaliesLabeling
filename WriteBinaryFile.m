@@ -16,7 +16,11 @@ function WriteBinaryFile(output_path,data, total_len)
   % write the output
   fid = fopen(output_path,'a');
   for i = 1:total_len
-      fprintf(fid,'%s', strcat(num2str(res(i)),','));
+      if i == total_len
+        fprintf(fid,'%s', num2str(res(i)));
+      else
+        fprintf(fid,'%s', strcat(num2str(res(i)),','));
+      end
   end
   fprintf(fid,'%s\n','');
   

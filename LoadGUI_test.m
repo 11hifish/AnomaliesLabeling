@@ -1,8 +1,8 @@
-outFP = '';
-indata = '';
 outpath = '';
+indata = '';
 datamx = LoadRawData(indata);
-startingCol = 2;
+startingCol = 35;
 acol = datamx(:,startingCol);
 LoadGUI(outpath,datamx,startingCol);
 plot(acol);
+
